@@ -4,13 +4,17 @@
  */
 
 const solution = (n) => {
-  const sqrt = Math.sqrt(n);
-  for (let i = 0; i < sqrt; i++) {
-    if (i * i === sqrt) {
+  for (let i = 0; i < n / 2; i++) {
+    if (i * i === n) {
       return 1;
     }
   }
   return 2;
 };
 
-console.log(solution(976));
+console.log(solution(144));
+
+/**
+ * 문제풀이
+ * 매개변수로 들어오는 값의 제곱수니깐 해당 값을 반으로 나눈값까지만 반복하면 된다.
+ */
