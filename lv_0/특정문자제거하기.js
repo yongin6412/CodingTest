@@ -4,9 +4,7 @@
  */
 
 const solution = (my_string, letter) => {
-  return my_string
-    .split("")
-    .filter((str) => str !== letter)
-    .join("");
+  return [...my_string].filter((str) => str !== letter).join("");
 };
-console.log(solution("BCBdbe", "B"));
+
+console.log(solution("abcdef", "f"));
